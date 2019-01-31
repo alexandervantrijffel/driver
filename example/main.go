@@ -11,7 +11,7 @@ import (
 
 func main() {
 	// create streamsdb connection
-	conn := sdb.MustOpen("sdb://sdb03.streamsdb.io:443?tls=1")
+	conn := sdb.MustOpen(`sdb://arctica:PASSWORDHERE@sdb03.streamsdb.io:443?tls=1`)
 	db := conn.DB("logs")
 	defer conn.Close()
 
